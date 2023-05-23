@@ -54,7 +54,10 @@ class User():
         """
         if pwd is None or type(pwd) is not str:
             return False
-        if self.__password is None:
+        """
+        in line 60, we change 'self.__password' to 'self.password'
+        """
+        if self.password is None:
             return False
         """stored value of __Password(pwd) is already in lowercase
         but is been returned in uppercase using '.upper()'
