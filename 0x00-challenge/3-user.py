@@ -58,8 +58,10 @@ class User():
             return False
         """stored value of __Password(pwd) is already in lowercase
         but is been returned in uppercase using '.upper()'
-        so we bring it back to lowercase, using '.lower()'"""
-        return hashlib.md5(pwd.encode()).hexdigest().lower() == self.__password
+        so we bring it back to lowercase, using '.lower()'
+        and change self.__Password to self.password
+        """
+        return hashlib.md5(pwd.encode()).hexdigest().lower() == self.password
 
 
 if __name__ == '__main__':
