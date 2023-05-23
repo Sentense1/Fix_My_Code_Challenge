@@ -42,7 +42,7 @@ class User():
         else:
             #issue in this line 45 is a typographical error
             #the correct code is 'self.__password'
-            self._password = hashlib.md5(pwd.encode()).hexdigest().lower()
+            self.__password = hashlib.md5(pwd.encode()).hexdigest().lower()
 
     def is_valid_password(self, pwd):
         """
