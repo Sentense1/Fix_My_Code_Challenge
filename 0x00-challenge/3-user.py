@@ -40,8 +40,8 @@ class User():
         if pwd is None or type(pwd) is not str:
             self.__password = None
         else:
-            #issue in this line 45 is a typographical error
-            #the correct code is 'self.__password'
+            """issue in this line 45 is a typographical error
+            the correct code is 'self.__password'"""
             self.__password = hashlib.md5(pwd.encode()).hexdigest().lower()
 
     def is_valid_password(self, pwd):
@@ -56,10 +56,10 @@ class User():
             return False
         if self.__password is None:
             return False
-        #stored value of __Password(pwd) is already in lowercase
-        #but is been returned in uppercase using '.upper()'
-        #so we bring it back to lowercase, using '.lower()'
-        return hashlib.md5(pwd.encode()).hexdigest().upper() == self.__password
+        """stored value of __Password(pwd) is already in lowercase
+        but is been returned in uppercase using '.upper()'
+        so we bring it back to lowercase, using '.lower()'"""
+        return hashlib.md5(pwd.encode()).hexdigest().lower() == self.__password
 
 
 if __name__ == '__main__':
