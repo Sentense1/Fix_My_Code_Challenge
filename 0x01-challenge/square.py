@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+"""
+Square class
+"""
+
 
 class Square():
-    """
-    A class representing a square.
-    """
+    """ A class representing a square. """
 
     def __init__(self, *args, **kwargs):
         """
